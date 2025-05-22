@@ -1,0 +1,45 @@
+.screen{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.splash-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background: #ee1c7e;
+  background: linear-gradient(
+    180deg,
+    rgba(238, 28, 126, 1) 0%,
+    rgba(237, 110, 37, 1) 73%
+  );
+  width: 90vw;
+  flex-direction: column;
+  border-radius: 4rem;
+}
+
+.big-text {
+  font-family: "Zain", sans-serif;
+  /* font-family: "ES Rebond Grotesque Extrabold", "ES Rebond Grotesque Extrabold Placeholder", sans-serif; */
+  font-weight: 800;
+  font-size: 13rem;
+  line-height: 0.6;
+  letter-spacing: -4px;
+  text-align: center;
+  color: #fff;
+  margin: 1rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .big-text {
+      font-size: 6rem;
+      letter-spacing: normal;
+      line-height: 0.5;
+    }
+    
+}
