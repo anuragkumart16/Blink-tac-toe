@@ -1,13 +1,17 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./game.css";
 import PlayerHolder from "../../components/PlayerHolder/PlayerHolder";
 import GameGrid from "../../components/GameGrid/GameGrid";
 import Scoreboard from "../../components/Scoreboard/Scoreboard";
 import GameControls from "../../components/GameControls/GameControls";
+import { GameContext } from "../../context/GameContext";
+import Overlay from "../../components/OverLay/Overlay";
 
 function Game() {
+  const {winner} = useContext(GameContext)
   return (
     <div className="screen">
+      {winner && <Overlay winner={winner}/>}
       <div className="game-div">
 
         <div style={{ display: "flex", flexDirection: "row", width: "100%" }}>
