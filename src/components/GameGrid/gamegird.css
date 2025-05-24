@@ -1,0 +1,5 @@
+.game-grid{
+    display: flex;
+    border: none;
+    margin: auto;
+}

@@ -1,0 +1,12 @@
+.scoreboard{
+    background-color: white;
+    border-radius: 1rem;
+    border-top-left-radius: 4rem ;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #ee1c7e;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+}

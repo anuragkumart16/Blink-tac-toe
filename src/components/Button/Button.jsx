@@ -1,9 +1,9 @@
 import './button.css'
 import React from 'react'
 
-function button({children,onclick}) {
+function button({children,onclick,style}) {
   return (
-    <button className='btn' onClick={onclick}>{children}</button>
+    <button className='btn' style={style} onClick={onclick}>{children}</button>
   )
 }
 

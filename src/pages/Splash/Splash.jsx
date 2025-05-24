@@ -7,7 +7,9 @@ import { useNavigate } from "react-router-dom";
 function Splash() {
   const navigate = useNavigate();
   function handleClick(){
-    navigate('/profile')
+    setTimeout(() => {
+    navigate('/profile');
+  }, 500); 
   }
   return (
     <div className="screen">

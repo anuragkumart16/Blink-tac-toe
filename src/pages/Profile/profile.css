@@ -1,0 +1,15 @@
+.profile-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background: #ee1c7e;
+  background: linear-gradient(
+    180deg,
+    rgba(238, 28, 126, 1) 0%,
+    rgba(237, 110, 37, 1) 73%
+  );
+  width: 90vw;
+  flex-direction: column;
+  border-radius: 4rem;
+}

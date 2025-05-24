@@ -1,0 +1,41 @@
+.RightNameHolder {
+  background-color: white;
+  border-top-left-radius: 4rem;
+  border-bottom-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ee1c7e;
+  /* border: 1px solid #ed6e25; */
+}
+.RightEmojiHolder {
+  background-color: white;
+  /* border-top-left-radius: 4rem; */
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ee1c7e;
+}
+.LeftNameHolder {
+  background-color: white;
+  border-bottom-right-radius: 4rem;
+  border-bottom-left-radius: 4rem;
+
+  border-top-right-radius: 4rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ee1c7e;
+}
+.LeftEmojiHolder {
+  background-color: white;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ee1c7e;
+}
