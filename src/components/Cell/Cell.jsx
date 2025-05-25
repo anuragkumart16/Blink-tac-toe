@@ -8,6 +8,9 @@ function Cell({ children, style , reference}) {
         setWarning("Cell is already filled, you can't occupy it again!")
     }
     else{
+      if (!nextEmoji) {
+        return
+      }
     e.target.innerHTML = nextEmoji
     if (turn === 'player1') {
       setTurn('player2')
