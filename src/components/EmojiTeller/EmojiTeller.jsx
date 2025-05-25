@@ -14,7 +14,8 @@ function EmojiTeller() {
         Math.floor(Math.random() * array.length)
         setNextEmoji(array[Math.floor(Math.random() * array.length)])
     }
-  }, [turn,setNextEmoji]);
+    console.log(nextEmoji)
+  }, [turn,setNextEmoji,nextEmoji]);
   return (
     <div className="turn-teller" style={{ marginTop: "1rem" }}>
       Next emoji: {nextEmoji}

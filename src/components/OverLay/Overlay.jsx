@@ -30,7 +30,9 @@ function Overlay() {
     setNextEmoji(null);
     setTurn("player1");
     resetCells(CellArray);
-    setWinner(null);
+    setTimeout(() => {
+      setWinner(null);
+    },250)
   }
 
   function handleQuit() {
