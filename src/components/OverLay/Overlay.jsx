@@ -34,6 +34,7 @@ function Overlay() {
   }
 
   function handleQuit() {
+    setQueue([]);
     setScore({ player1: 0, player2: 0 });
     setNextEmoji(null);
     setTurn("player1");
