@@ -6,7 +6,7 @@ import { GameContext } from '../../context/GameContext'
 function PlayerHolder({playerName,playerEmoji,align,activePlayer}) {
   const {turn} = useContext(GameContext)
   return (
-    <div style={{display:"flex",flexDirection:"column",width:"100%",alignItems:align}} className={turn == activePlayer && 'playerHolder'}>
+    <div style={{display:"flex",flexDirection:"column",width:"100%",alignItems:align}} className={turn == activePlayer ? 'playerHolder':''}>
         {align ==='flex-end' ? <div className={align === 'flex-end' ? 'RightNameHolder' : 'LeftNameHolder'}>Player Name: {playerName}</div> :
          <div className={align === 'flex-end' ? 'RightEmojiHolder' : 'LeftEmojiHolder'}>
             {

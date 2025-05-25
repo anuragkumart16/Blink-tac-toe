@@ -8,10 +8,13 @@ import { GameContext } from "../../context/GameContext";
 import Overlay from "../../components/OverLay/Overlay";
 import Warning from "../../components/Warning/Warning";
 import { motion } from "framer-motion";
+import Help from "../../components/Help/Help";
+
 
 
 function Game() {
-  const { winner, warning } = useContext(GameContext);
+  const { winner, warning,help } = useContext(GameContext);
+  
 
 
 
@@ -24,6 +27,7 @@ function Game() {
     >
       {winner && <Overlay winner={winner} />}
       {warning && <Warning />}
+      {help && <Help />}
 
       <div className="game-div">
         <div style={{ display: "flex", flexDirection: "row", width: "100%" }}>
@@ -42,7 +46,7 @@ function Game() {
             display: "flex",
             flexDirection: "row",
             width: "100%",
-            alignItems: "center",
+            alignItems: "flex-end",
           }}
         >
           <PlayerHolder

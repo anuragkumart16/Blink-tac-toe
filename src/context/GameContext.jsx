@@ -1,6 +1,6 @@
 import React, { useState, createContext, useRef, useEffect } from "react";
 import { winCheck } from "../utils/WinCheck";
-import Cell from "../components/Cell/Cell";
+
 
 const GameContext = createContext();
 
@@ -11,6 +11,7 @@ const GameProvider = ({ children }) => {
   const [winner, setWinner] = useState(null);
   const [score,setScore] = useState({player1:0,player2:0})
   const [warning,setWarning] = useState(null)
+  const [help,setHelp] = useState(false)
   const GameGrid = useRef(null);
 
   const Cell1 = useRef(null);
@@ -68,7 +69,9 @@ const GameProvider = ({ children }) => {
         score,
         setScore,
         warning,
-        setWarning
+        setWarning,
+        help,
+        setHelp
       }}
     >
       {children}
