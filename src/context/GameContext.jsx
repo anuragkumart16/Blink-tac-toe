@@ -10,6 +10,7 @@ const GameProvider = ({ children }) => {
   const [queue, setQueue] = useState([]);
   const [winner, setWinner] = useState(null);
   const [score,setScore] = useState({player1:0,player2:0})
+  const [warning,setWarning] = useState(null)
   const GameGrid = useRef(null);
 
   const Cell1 = useRef(null);
@@ -34,12 +35,22 @@ const GameProvider = ({ children }) => {
     Cell9,
   ];
 
+  // win Check 
   useEffect(() => {
     const result = winCheck(CellArray, turn);
     if (result[0]) {
       setWinner(winCheck(CellArray, turn)[1]);
     }
   }, [turn, CellArray, winner]);
+
+  // queue handler
+  useEffect(()=>{
+    if (queue.length > 6){
+      queue[0].innerHTML = null
+      queue.shift()
+      setQueue(queue)
+    }
+  },[queue,setQueue])
 
   return (
     <GameContext.Provider
@@ -55,7 +66,9 @@ const GameProvider = ({ children }) => {
         winner,
         setWinner,
         score,
-        setScore
+        setScore,
+        warning,
+        setWarning
       }}
     >
       {children}

@@ -20,7 +20,7 @@ function Splash() {
           transition={{ duration: 0.3 }}
           className="big-text"
         >
-          real
+          blink
         </motion.h1>
         <motion.h1
           initial={{ y: 1000, opacity: 0 }}
@@ -28,16 +28,16 @@ function Splash() {
           transition={{ duration: 0.4 }}
           className="big-text"
         >
-          friends
+          tac toe
         </motion.h1>
-        <motion.h1
+        {/* <motion.h1
           initial={{ y: 1000, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
           className="big-text"
         >
           real fun
-        </motion.h1>
+        </motion.h1> */}
         <motion.div
           initial={{ y: 1000, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

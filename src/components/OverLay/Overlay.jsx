@@ -44,7 +44,7 @@ function Overlay() {
   return (
     <div className='overlay'>
       <div className='message-holder'>
-            <h3>{playerName} won!</h3>
+            <h3>Player {playerName} wins!</h3>
             <Button style={{border: '1px solid #ed6e25'}} onclick={()=>{handleRematch()}}>Rematch!</Button>
             <Button style={{border: '1px solid #ed6e25'}} onclick={()=>{handleQuit()}}>Quit</Button>
       </div>
