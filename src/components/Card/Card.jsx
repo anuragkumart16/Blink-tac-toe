@@ -9,11 +9,23 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-
-function PlayerNameCard({ title, label, inputRef, handleClick, options, emogiState, setEmogiState }) {
+function PlayerNameCard({
+  title,
+  label,
+  inputRef,
+  handleClick,
+  options,
+  emogiState,
+  setEmogiState,
+}) {
   return (
     <Card
-      sx={{ padding: "1rem", display: "flex" }}
+      sx={{
+        padding: { xs: "0.5rem", sm: "1rem" },
+        display: "flex",
+        flexDirection: { xs: "column", sm: "row" },
+        borderRadius: "1rem",
+      }}
       style={{ borderRadius: "1rem" }}
     >
       <CardContent>
@@ -21,12 +33,14 @@ function PlayerNameCard({ title, label, inputRef, handleClick, options, emogiSta
         <div>
           <Box
             component="form"
-            sx={{ "& > :not(style)": { m: 1, width: "90%" } }}
+            sx={{
+              "& > :not(style)": { m: 1, width: { xs: "100%", sm: "90%" } },
+            }}
             noValidate
             autoComplete="off"
           >
             <TextField label={label} inputRef={inputRef} />
-            <FormControl fullWidth>
+            <FormControl >
               <InputLabel id="Select-label">Emoji</InputLabel>
               <Select
                 labelId="Select-label"
@@ -35,11 +49,17 @@ function PlayerNameCard({ title, label, inputRef, handleClick, options, emogiSta
                 label="Emogi"
                 onChange={(e) => setEmogiState(e.target.value)}
               >
-                {
-                  options.map((option,id) => {
-                    return <MenuItem key={id} value={`${option}`}>{option.map((emoji,id_)=><span key={id_} style={{display:"inline"}}>{emoji}</span>)}</MenuItem>
-                  })
-                }
+                {options.map((option, id) => {
+                  return (
+                    <MenuItem key={id} value={`${option}`}>
+                      {option.map((emoji, id_) => (
+                        <span key={id_} style={{ display: "inline" }}>
+                          {emoji}
+                        </span>
+                      ))}
+                    </MenuItem>
+                  );
+                })}
               </Select>
             </FormControl>
             <Button variant="contained" onClick={handleClick} fullWidth>

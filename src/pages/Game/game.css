@@ -1,8 +1,9 @@
 .game-div {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   height: 90vh;
+  max-height: fit-content;
   background: #ee1c7e;
   background: linear-gradient(
     180deg,
@@ -12,4 +13,12 @@
   width: 90vw;
   flex-direction: column;
   border-radius: 4rem;
+
+}
+
+@media screen and (max-width: 600px) {
+  .game-div{
+    height: max-content;
+  }
+  
 }

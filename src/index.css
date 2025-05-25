@@ -13,6 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html{
+  font-size: 14px;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -67,4 +70,11 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media screen and (max-width: 600px) {
+  html{
+    font-size: 10px;
+  }
+  
 }

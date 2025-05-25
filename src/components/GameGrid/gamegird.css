@@ -3,3 +3,10 @@
     border: none;
     margin: auto;
 }
+
+@media screen and (max-width: 600px) {
+    .game-grid{
+        margin: 3rem;
+    }
+    
+}

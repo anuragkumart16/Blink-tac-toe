@@ -12,3 +12,12 @@
     cursor: pointer;
     background-color: #b00856;
 }
+
+@media screen and (max-width: 600px) {
+    .cell{
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    
+}

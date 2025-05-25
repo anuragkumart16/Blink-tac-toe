@@ -5,6 +5,7 @@ import Profile from './pages/Profile/profile';
 import Game from './pages/Game/game';
 import { GameProvider } from './context/GameContext';
 
+
 function App() {
 
 

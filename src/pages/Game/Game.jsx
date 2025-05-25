@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext, useEffect } from "react";
 import "./game.css";
 import PlayerHolder from "../../components/PlayerHolder/PlayerHolder";
 import GameGrid from "../../components/GameGrid/GameGrid";
@@ -7,22 +7,32 @@ import GameControls from "../../components/GameControls/GameControls";
 import { GameContext } from "../../context/GameContext";
 import Overlay from "../../components/OverLay/Overlay";
 import Warning from "../../components/Warning/Warning";
+import { motion } from "framer-motion";
+
 
 function Game() {
-  const {winner,warning} = useContext(GameContext)
+  const { winner, warning } = useContext(GameContext);
+
+
+
   return (
-    <div className="screen">
-      {winner && <Overlay winner={winner}/>}
-      {warning && <Warning/>}
+    <motion.div
+      className="screen"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      {winner && <Overlay winner={winner} />}
+      {warning && <Warning />}
 
       <div className="game-div">
-
         <div style={{ display: "flex", flexDirection: "row", width: "100%" }}>
-          <Scoreboard />
+          <Scoreboard className="ScoreBoard" />
           <PlayerHolder
             playerName={localStorage.getItem("firstPlayerName")}
             playerEmoji={localStorage.getItem("firstPlayerEmoji").split(",")}
             align="flex-end"
+            activePlayer="player2"
           />
         </div>
 
@@ -39,11 +49,12 @@ function Game() {
             playerName={localStorage.getItem("secondPlayerName")}
             playerEmoji={localStorage.getItem("secondPlayerEmoji").split(",")}
             align="flex-start"
+            activePlayer="player1"
           />
-          <GameControls/>
+          <GameControls />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

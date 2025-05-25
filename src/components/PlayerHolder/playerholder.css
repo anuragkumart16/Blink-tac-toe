@@ -39,3 +39,10 @@
   font-weight: 900;
   color: #ee1c7e;
 }
+
+.playerHolder{
+  opacity: 0.8;
+  cursor: not-allowed;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
