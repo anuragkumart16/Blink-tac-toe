@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Splash from './pages/Splash/Splash';
 import Profile from './pages/Profile/Profile';
-import Game from './pages/Game/game';
+import Game from './pages/Game/Game';
 import { GameProvider } from './context/GameContext';
 
 
